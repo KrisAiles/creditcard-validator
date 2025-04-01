@@ -2,10 +2,10 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Credit Card Validator</title>
         <link rel="stylesheet" type="text/css" href="./resources/css/index.css">
-        <script src="" defer></script>
+        <script src="./resources/javascript/index.js" defer></script>
     </head>
     <body>
         <header>
@@ -15,7 +15,19 @@
 
         </nav>
         <main>
-
+            <div id="main-container">
+                <p>Enter a credit card number to check if it is vaild.</p>
+            </div>
+            <div id="form-container">
+                <form id="card-validate-form">
+                    <label for="card-number">Credit Card Number: </label><br>
+                    <input id="card-number" name="card-number" type="text" required /> <br><br>
+                    <input id="submit-button" type="submit" value="Validate" />
+                </form>
+            </div>
+            <div id="form-output-container">
+                <p id="form-output-para"><!--Card Number: 4539677908016808 issued by Visa is VALID.--></p>
+            </div>
         </main>
         <footer>
 

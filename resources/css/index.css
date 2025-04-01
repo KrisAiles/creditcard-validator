@@ -1,4 +1,6 @@
 body {
+  font-size: 16px;
+  color: #ffffff;
   background-image: url("../images/main-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -16,7 +18,7 @@ header {
   width: 100%;
   height: 100px;
   margin: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.75);
   border-bottom: 1px solid #ffffff;
 }
 header h1 {
@@ -24,14 +26,92 @@ header h1 {
   font-size: 40px;
   margin: 0;
 }
+@media only screen and (max-width: 800px) {
+  header h1 {
+    font-size: 34px;
+  }
+}
 
 main {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   width: 60%;
-  height: 50vh;
-  background-color: rgba(0, 0, 0, 0.5);
-  margin: 150px auto;
+  background-color: rgba(0, 0, 0, 0.75);
+  margin: 100px auto;
+  padding: 15px;
   border-radius: 15px;
   border: 1px solid #ffffff;
+}
+@media only screen and (max-width: 800px) {
+  main {
+    width: 80%;
+  }
+}
+
+#main-container {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 15px;
+  height: 140px;
+}
+#main-container p {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+#form-container {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 15px;
+  height: 140px;
+}
+#form-container form {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 500;
+}
+#form-container form input {
+  width: 230px;
+  padding: 5px;
+  background-color: #333333;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+#submit-button {
+  cursor: pointer;
+  box-shadow: 5px 5px 5px #000000;
+}
+#submit-button:active {
+  box-shadow: inset 5px 5px 5px #000000;
+}
+
+#form-output-container {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 15px;
+  height: 140px;
+}
+#form-output-container p {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=index.css.map */

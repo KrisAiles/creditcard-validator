@@ -1,8 +1,46 @@
+@mixin mobile {
+    @media only screen and (max-width: 800px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media only screen and (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media only screen and (min-width: 1201px) {
+        @content;
+    }
+}
+
+@mixin container {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 15px;
+    height: 140px;
+}
+
+@mixin paragraph-text {
+    color: $font-color;
+    font-size: 24px;
+    font-weight: 500;
+}
+
 $font-color: #ffffff;
-$bg-color: rgba($color: #000000, $alpha: 0.5);
+$bg-color: rgba($color: #000000, $alpha: 0.75);
 $border-style: 1px solid $font-color;
 
+
+
 body {
+    font-size: 16px;
+    color: $font-color;
     background-image: url("../images/main-background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -27,15 +65,75 @@ header {
         color: $font-color;
         font-size: 40px;
         margin: 0;
+
+        @include mobile {
+            font-size: 34px;
+        }
     }
 
 }
 
 main {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     width: 60%;
-    height: 50vh;
     background-color: $bg-color;
-    margin: 150px auto;
+    margin: 100px auto;
+    padding: 15px;
     border-radius: 15px;
     border: $border-style;
+
+        @include mobile {
+            width: 80%
+        }
+
+}
+
+#main-container {
+    @include container;
+
+    p {
+        @include paragraph-text;
+    }
+
+}
+
+#form-container {
+    @include container;
+
+    form {
+        @include paragraph-text;
+        input {
+            width: 230px;
+            padding: 5px;
+            background-color: #333333;
+            border: $border-style;
+            border-radius: 5px;
+            font-size: 24px;
+            color: $font-color
+        }
+    }
+
+}
+
+#submit-button {
+    cursor: pointer;
+    box-shadow: 5px 5px 5px #000000;
+
+    &:active {
+        box-shadow: inset 5px 5px 5px #000000;
+    }
+}
+
+#form-output-container {
+    @include container;
+
+    p {
+        @include paragraph-text;
+    }
+
 }
