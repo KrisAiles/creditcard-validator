@@ -1,0 +1,41 @@
+$font-color: #ffffff;
+$bg-color: rgba($color: #000000, $alpha: 0.5);
+$border-style: 1px solid $font-color;
+
+body {
+    background-image: url("../images/main-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: left;
+    background-position-y: top;
+    min-height: 100vh;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100px;
+    margin: 0;
+    background-color: $bg-color;
+    border-bottom: $border-style;
+
+    h1 {
+        color: $font-color;
+        font-size: 40px;
+        margin: 0;
+    }
+
+}
+
+main {
+    width: 60%;
+    height: 50vh;
+    background-color: $bg-color;
+    margin: 150px auto;
+    border-radius: 15px;
+    border: $border-style;
+}
